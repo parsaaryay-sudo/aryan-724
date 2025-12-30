@@ -24,7 +24,7 @@ class SearcherBus :
             "Referer": "https://safar724.com/"
         }
 
-        response = requests.get(url, params=params, headers=headers)
+        response = requests.get(url, params=params, headers=headers , timeout = 10)
         data = response.json()
 
         services = data.get("items", [])
