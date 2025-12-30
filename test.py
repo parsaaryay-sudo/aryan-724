@@ -19,5 +19,5 @@ headers = {
 response = requests.get(url, params=params, headers=headers)
 data = response.json()
 
-st.write(response.status_code())
+st.write(response.status_code)
 
