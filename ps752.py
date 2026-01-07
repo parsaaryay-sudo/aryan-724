@@ -14,13 +14,17 @@ class SearcherBus:
             "Date": self.date,
             "Origin": self.origin,
             "Destination": self.destination
+        }   
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                          "AppleWebKit/537.36 (KHTML, like Gecko) "
+                          "Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Accept-Language": "fa-IR,fa;q=0.9,en-US;q=0.8,en;q=0.7",
+            "Referer": "https://safar724.com/",
+            "X-Requested-With": "XMLHttpRequest",
         }
 
-        headers = {
-            "User-Agent": "Mozilla/5.0",
-            "Accept": "application/json",
-            "Referer": "https://safar724.com/"
-        }
 
         try:
             response = requests.get(url, params=params, headers=headers, timeout=10)
